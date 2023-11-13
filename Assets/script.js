@@ -188,7 +188,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
     loadHistoryFromStorage();
 });

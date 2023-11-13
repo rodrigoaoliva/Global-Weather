@@ -51,6 +51,11 @@ main aside div {
     border-radius: 5px;
     font-size: 15px;
     color: white;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: #226992;
 }
 
 .historyButtons {
@@ -59,7 +64,11 @@ main aside div {
     height: 37px;
     border-radius: 5px;
     font-size: 15px;
-    
+    cursor: pointer;    
+}
+
+.historyButtons:hover {
+    background-color: #818181;
 }
 
 .results {
