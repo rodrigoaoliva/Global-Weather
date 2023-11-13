@@ -123,7 +123,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     });
 
+    // Function to create HTML for weather icon
+  function createWeatherIcon(iconCode, altText) {
+    const weatherIconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
+    const weatherIcon = document.createElement('img');
+    weatherIcon.src = weatherIconUrl;
+    weatherIcon.alt = altText;
+    weatherIcon.classList.add('weatherIcon');
+    return weatherIcon.outerHTML;
+    }
+
+    // Function to update forecast with weather icons
+    function updateForecast(forecastData) {
+    forecastContainer.innerHTML = '';
+
+    // Display the forecast for the next 5 days
+    for (let i = 0; i < 5; i++) {
+        const forecast = forecastData.list[i * 8]; // Retrieve data for each day
+        const forecastResult = document.createElement('div');
+        forecastResult.classList.add('forecastResult');
+
+        const date = new Date(forecast.dt * 1000);
+        const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear().toString().slice(2)}`;
+
+        forecastResult.innerHTML = `
+            <h2>${formattedDate}</h2>
+            ${createWeatherIcon(forecast.weather[0].icon, forecast.weather[0].description)}
+            <p>Temp: <span>${forecast.main.temp}°C</span></p>
+            <p>Wind: <span>${forecast.wind.speed} m/s</span></p>
+            <p>Humidity: <span>${forecast.main.humidity}%</span></p>
+        `;
+
+        forecastContainer.appendChild(forecastResult);
+    }
+    }
+
+
+
+
+
     loadHistoryFromStorage();
+
+    
 
 
 });
