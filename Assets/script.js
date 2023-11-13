@@ -89,6 +89,21 @@ document.addEventListener('DOMContentLoaded', function () {
       historyContainer.insertBefore(newHistoryButton, historyContainer.secondChild);
     }
 
+    // Function to save the search history to local storage
+    function saveHistoryToStorage() {
+    const historyButtons = document.querySelectorAll('.historyButtons');
+    const cities = Array.from(historyButtons).map(button => button.textContent);
+    localStorage.setItem('weatherAppHistory', JSON.stringify(cities));
+    }
 
+    // Function to load the search history from local storage
+    function loadHistoryFromStorage() {
+    const storedHistory = localStorage.getItem('weatherAppHistory');
+    if (storedHistory && !historyLoaded) {
+        const cities = JSON.parse(storedHistory);
+        cities.forEach(city => addCityToHistory(city));
+        historyLoaded = true; // Set the flag to true after loading history
+    }
+    }
 
 });
