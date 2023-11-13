@@ -95,7 +95,7 @@ main p {
 .forecast {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 10px;
     margin-top: 8px;
     
 }
@@ -115,3 +115,52 @@ main p {
     height: 35px; 
   }
   
+  /*Styling for the navigation links  when screen's width isn't larger than 600px*/
+@media screen and (max-width:1218px) {
+    .forecast {
+        display: flex;
+        flex-wrap: wrap;
+        
+
+    }
+}
+
+@media screen and (max-width:1218px) {
+    .forecastResult {
+    width: 100%;        
+
+    }
+}
+
+@media screen and (max-width:916px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:916px) {
+    main aside {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:916px) {
+    .results {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:572px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:492px) {
+    header {
+        font-size: 25px;
+    }
+}
+
