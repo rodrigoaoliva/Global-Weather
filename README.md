@@ -7,6 +7,7 @@ This Weather Dashboard project provides users with current and future weather co
 1. Visit the website https://rodrigoaoliva.github.io/Global-Weather/.
 2. Enter the name of a city in the search input field or click on a city from the search history. 
 3. The search history will be updated with the searched city. 
+
 ![Screenshot of the webpage](assets/Screenshot%202023-11-13%20173921.png)
 
 ## Installation
