@@ -1,166 +1,187 @@
+/*Styling for the entire body of the page */
 * {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*Define font family for the entire page */
+    margin: 0; /*Removes default margins from the page*/
+
 }
 
+/*Styling for the header of the page */
 header {
-    background-image: linear-gradient(to right, rgb(22, 69, 126), rgb(131, 39, 177));
-    height: 75px;
-    color: white;
-    font-size: 30px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    background-image: linear-gradient(to right, rgb(22, 69, 126), rgb(131, 39, 177)); /*Sets a gradient background*/
+    height: 75px; /*Defines height*/
+    color: white; /*Defines font color*/
+    font-size: 30px; /*Defines font size*/
+    align-items: center; /*Aligns items vertically*/
+    display: flex; /*Sets flex display*/
+    justify-content: center; /*Center content horizontally*/
     
 }
 
+/*Styling for main section*/
 main {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
-    gap: 30px;
+    display: flex; /*Sets flex display*/
+    flex-direction: row; /*Sets row flex direction*/
+    margin: 20px; /*Adds margin to all sides of the container*/
+    gap: 30px; /*Adds gap between elements*/
 }
 
+/*Styling for aside section within the main section*/
 main aside {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 20%;
+    display: flex; /*Sets flex display*/
+    flex-direction: column; /*Sets row column direction*/
+    gap: 15px; /*Adds gap between elements*/
+    width: 20%; /*Sets a width of 20% of the screen*/
 }
 
+/*Defines font size for all h1 elements on the page*/
 h1 {
     font-size: 30px;
 }
 
+/*Styling for inputs within the aside section within the main section*/
 main aside input {
-    height: 40px;
-    padding: 0 10px 0 10px;
-    border: 1px solid #333333;
-    border-radius: 5px;
+    height: 40px; /*Defines height*/
+    padding: 0 10px 0 10px; /*Defines padding to right and left sides*/
+    border: 1px solid #333333; /*Adds solid border of all pixel*/
+    border-radius: 5px; /*Adds roundess to all sides of the border*/
 }
 
+/*Syling for div elements within the aside section within the main section*/
 main aside div {
-    height: 1px;
-    background-color: #333333;
+    height: 1px; /*Defines height*/
+    background-color: #333333; /*Defines background color*/
 }
 
+/*Syling for searchButton class*/
 .searchButton {
-    background-color: #39b3fa;
-    border: none;
-    height: 37px;
-    border-radius: 5px;
-    font-size: 15px;
-    color: white;
-    cursor: pointer;
+    background-color: #39b3fa; /*Defines background color*/
+    border: none; /*Removes default border*/
+    height: 37px; /*Defines height*/
+    border-radius: 5px; /*Defines borders roundness to all sides*/
+    font-size: 15px; /*Defines font size*/
+    color: white; /*Defines font color*/
+    cursor: pointer; /*Defines pointer on hover*/
 }
 
+/*Syling for searchButton class when hovered*/
 .searchButton:hover {
-    background-color: #226992;
+    background-color: #226992; /*Defines background color*/
 }
 
+/*Syling for search button class*/
 .historyButtons {
-    background-color: #c1c1c1;
-    border: none;
-    height: 37px;
-    border-radius: 5px;
-    font-size: 15px;
-    cursor: pointer;    
+    background-color: #c1c1c1; /*Defines background color*/
+    border: none; /*Removes default border*/
+    height: 37px; /*Defines height*/
+    border-radius: 5px; /*Defines border roundness*/
+    font-size: 15px; /*Defines font size*/
+    cursor: pointer;   /*Defines pointer on hover*/  
 }
 
+/*Syling for historyButton class when hovered*/
 .historyButtons:hover {
-    background-color: #818181;
+    background-color: #818181; /*Defines background color*/
 }
 
+/*Styling for results class*/
 .results {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap: 30px;
+    display: flex; /*Sets flex display*/
+    flex-direction: column; /*Sets column direction*/
+    width: 80%; /*Sets width to be 80% of the page*/
+    gap: 30px; /*Adds gap for elements within the container*/
 }
 
-
+/*Styling for todayResult class*/
 .todayResult {
-    border: 1px solid #333333;
-    border-radius: 4px;
-    padding: 20px;
-    height: fit-content;
+    border: 1px solid #333333; /*Adds solid border of 1px*/
+    border-radius: 4px; /*Adds border roundness*/
+    padding: 20px; /*Adds padding to all sides*/
+    height: fit-content; /*Fits height to content*/
 
 }
 
+/*Styling for p tags within the main section*/
 main p {
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 20px; /*Defines font size*/
+    margin-top: 5px; /*Adds top margin*/
 }
 
+/*Styling for the forecast class*/
 .forecast {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 8px;
+    display: flex; /*Sets flex display*/
+    flex-direction: row; /*Sets row direction*/
+    gap: 10px; /*Adds gap between elements*/
+    margin-top: 8px; /*Adds top margin*/
     
 }
 
+/*Styling for the forecastResults class*/
 .forecastResult {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    background-color: rgb(60, 67, 76);
-    color: white;
-    border-radius: 5px;
-    padding: 13px 10px 13px 10px;
+    display: flex; /*Sets flex display*/
+    flex-direction: column; /*Sets column direction*/
+    width: 30%; /**Sets width to be 30% of the page*/
+    background-color: rgb(60, 67, 76); /*Defines background color*/
+    color: white; /*Defines font color*/
+    border-radius: 5px; /*Adds border roundness*/
+    padding: 13px 10px 13px 10px; /*Adds padding to all sides*/
 }
 
+/*Styling for weatherIcon class*/
 .weatherIcon {
-    width: 35px; 
-    height: 35px; 
+    width: 35px; /*Defines fixed width*/
+    height: 35px; /*Defines fixed height*/
   }
   
-  /*Styling for the navigation links  when screen's width isn't larger than 600px*/
+/*Styling for forecast class when screen's width isn't larger than 1218px*/
 @media screen and (max-width:1218px) {
     .forecast {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex; /*Sets flex display*/
+        flex-wrap: wrap; /*Makes elements break into the next line*/
         
 
     }
 }
 
+/*Styling for forecastResult class when screen's width isn't larger than 1218px*/
 @media screen and (max-width:1218px) {
     .forecastResult {
-    width: 100%;        
+    width: 100%; /*Sets width to be 100% of the screen*/
 
     }
 }
 
+/*Styling for the main section  when screen's width isn't larger than 916px*/
 @media screen and (max-width:916px) {
     main {
-        display: flex;
-        flex-direction: column;
+        display: flex; /*Sets flex display*/
+        flex-direction: column; /*Make flex direction a column*/
     }
 }
 
-
+/*Styling for the aside section within main section  when screen's width isn't larger than 916px*/
 @media screen and (max-width:916px) {
     main aside {
-        width: 100%;
+        width: 100%; /*Sets width to be 100% of the screen*/
     }
 }
-
+/*Styling for the results class when screen's width isn't larger than 916px*/
 @media screen and (max-width:916px) {
     .results {
-        width: 100%;
+        width: 100%; /*Sets width to be 100% of the screen*/
     }
 }
 
+/*Styling for all h1 elements when screen's width isn't larger than 572px*/
 @media screen and (max-width:572px) {
     h1 {
-        font-size: 25px;
+        font-size: 25px; /*Defines font size*/
     }
 }
 
+/*Styling for the header section when screen's width isn't larger than 492px*/
 @media screen and (max-width:492px) {
     header {
-        font-size: 25px;
+        font-size: 25px; /*Defines font size*/
     }
 }
 
