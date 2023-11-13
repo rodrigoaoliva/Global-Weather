@@ -158,13 +158,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     }
 
+    // Function to update current weather with weather icon
+  function updateCurrentWeather(weatherData) {
+    const cityNameElement = document.getElementById('cityName');
+    cityNameElement.innerHTML = `${weatherData.name} (${new Date().toLocaleDateString()})`; // Set city name and date
+
+    // Get the weather icon code from the API response
+    const weatherIconCode = weatherData.weather[0].icon;
+
+    // Construct the URL for the weather icon
+    const weatherIconUrl = `http://openweathermap.org/img/w/${weatherIconCode}.png`;
+
+    // Create an image element for the weather icon
+    const weatherIcon = document.createElement('img');
+    weatherIcon.src = weatherIconUrl;
+    weatherIcon.alt = weatherData.weather[0].description; // Alt text can be the weather description
+    weatherIcon.classList.add('weatherIcon');
+
+    // Insert the weather icon next to the city name and date
+    cityNameElement.appendChild(weatherIcon);
+
+    // Display the temperature, wind, and humidity
+    const tempParagraph = document.getElementById('temp');
+    tempParagraph.innerHTML = `Temp: ${weatherData.main.temp}°C`;
+
+    wind.textContent = `Wind: ${weatherData.wind.speed} m/s`;
+    humidity.textContent = `Humidity: ${weatherData.main.humidity}%`;
+    }
+
 
 
 
 
     loadHistoryFromStorage();
-
-    
-
-
 });
