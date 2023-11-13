@@ -8,8 +8,7 @@ This Weather Dashboard project provides users with current and future weather co
 2. Enter the name of a city in the search input field or click on a city from the search history. 
 3. The search history will be updated with the searched city. 
 
-![Screenshot of the webpage](assets/Screenshot%201.png)
-![Screenshot of the section to start the quiz](assets/Screenshot%202023-10-30%20232208.png)
+![Screenshot of the weather application](assets/Screenshot%201.png)
 
 ## Installation
 1. Clone the Git Hub repository to your local machine by pasting the following command to your terminal: "git clone https://github.com/rodrigoaoliva/Global-Weather.git"
