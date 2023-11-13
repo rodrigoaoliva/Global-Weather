@@ -8,4 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const humidity = document.getElementById('humidity');
     const forecastContainer = document.getElementById('forecastContainer');
 
+  // OpenWeatherMap API key
+  const apiKey = '4e6e807ee59834126e8fdbcfad716167';
+
+
+
 });
