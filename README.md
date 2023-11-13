@@ -9,6 +9,7 @@ This Weather Dashboard project provides users with current and future weather co
 3. The search history will be updated with the searched city. 
 
 ![Screenshot of the webpage](assets/Screenshot%201.png)
+![Screenshot of the section to start the quiz](assets/Screenshot%202023-10-30%20232208.png)
 
 ## Installation
 1. Clone the Git Hub repository to your local machine by pasting the following command to your terminal: "git clone https://github.com/rodrigoaoliva/Global-Weather.git"
