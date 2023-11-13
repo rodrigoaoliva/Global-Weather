@@ -106,4 +106,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     }
 
+    // Event listener for the search button
+  searchButton.addEventListener('click', function () {
+    const city = searchInput.value.trim();
+
+    if (city !== '') {
+        getWeather(city);
+    }
+    });
+
+    // Event listener for the search history buttons
+    historyContainer.addEventListener('click', function (event) {
+    if (event.target.classList.contains('historyButtons')) {
+        const city = event.target.textContent;
+        getWeather(city);
+    }
+});
+
 });
