@@ -70,6 +70,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+      // Function to check if a city is in the search history
+    function isCityInHistory(city) {
+      const historyButtons = document.querySelectorAll('.historyButtons');
+      return Array.from(historyButtons).some(button => button.textContent.toLowerCase() === city.toLowerCase());
+    }
+
+    // Function to add a city to the search history
+    function addCityToHistory(city) {
+      const newHistoryButton = document.createElement('button');
+      newHistoryButton.classList.add('historyButtons');
+      newHistoryButton.textContent = city;
+
+      newHistoryButton.addEventListener('click', function () {
+          getWeather(city);
+      });
+
+      historyContainer.insertBefore(newHistoryButton, historyContainer.secondChild);
+    }
 
 
 
