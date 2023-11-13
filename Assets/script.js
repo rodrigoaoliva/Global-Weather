@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const apiKey = '4e6e807ee59834126e8fdbcfad716167';
   let historyLoaded = false; // Flag to check if history has been loaded
 
-// Function to get weather data for a given city
-function getWeather(city) {
+    // Function to get weather data for a given city
+    function getWeather(city) {
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -36,7 +36,39 @@ function getWeather(city) {
             updateForecast(data);
         })
         .catch(error => console.error('Error fetching forecast data:', error));
-}
+    }
+
+    // Function to update current weather data in the UI
+    function updateCurrentWeather(weatherData) {
+    cityName.textContent = `${weatherData.name} (${new Date().toLocaleDateString()})`;
+    temp.textContent = `${weatherData.main.temp}°C`;
+    wind.textContent = `${weatherData.wind.speed} m/s`;
+    humidity.textContent = `${weatherData.main.humidity}%`;
+    }
+
+    // Function to update forecast data in the UI
+    function updateForecast(forecastData) {
+    forecastContainer.innerHTML = '';
+
+    // Display the forecast for the next 5 days
+    for (let i = 0; i < 5; i++) {
+        const forecast = forecastData.list[i * 8];
+        const forecastResult = document.createElement('div');
+        forecastResult.classList.add('forecastResult');
+
+        const date = new Date(forecast.dt * 1000);
+        const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear().toString().slice(2)}`;
+
+        forecastResult.innerHTML = `
+            <h2>${formattedDate}</h2>
+            <p>Temp: <span>${forecast.main.temp}°C</span></p>
+            <p>Wind: <span>${forecast.wind.speed} m/s</span></p>
+            <p>Humidity: <span>${forecast.main.humidity}%</span></p>
+        `;
+
+        forecastContainer.appendChild(forecastResult);
+        }
+    }
 
 
 
