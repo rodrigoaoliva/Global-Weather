@@ -121,6 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const city = event.target.textContent;
         getWeather(city);
     }
-});
+    });
+
+    loadHistoryFromStorage();
+
 
 });
