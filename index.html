@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Weather</title>
+    <link rel="stylesheet" type="text/css" href="Assets/style.css" />
+</head>
+<body>
+    <header>
+        Global Weather Dashboard
+    </header>
+
+    <main>
+        <aside> 
+            <h1>Search For a City:</h1>
+            <input placeholder="Miami" id="cityInput"> <!-- City search input-->
+            <button class="searchButton">Search</button> <!--City search button-->
+            <div></div> 
+            <button class="historyButtons">Atlanta</button> <!--Search history button-->
+            <button class="historyButtons">Miami</button> <!--Search history button-->
+            <button class="historyButtons">Chicago</button> <!--Search history button-->
+            <button class="historyButtons">New York</button> <!--Search history button-->
+        </aside>
+
+        <section class="results">
+            <section class="todayResult"> <!--Result for today's date-->
+            <h1 id="cityName">Atlanta (9/13/22) <!--Show weather icon here --></h1> <!--Name of the city searched along with today's date-->
+            <!--Don't show weather icon here-->
+            <p>Temp: <span id="temp"></span></p> 
+            <p>Wind: <span id="wind"></span></p> 
+            <p>Humidity: <span id="humidity"></span></p>
+            </section>
+
+            <section>
+                <h1>5-Day Forecast</h1> <!--Weather results for the next 5 days-->
+                <div class="forecast" id="forecastContainer"></div>
+            </section>
+        </section>
+    </main>
+
+    <script src="Assets/script.js"></script>
+</body>
+</html>
